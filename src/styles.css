@@ -1,8 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
 
+html { box-sizing: border-box; }
 html, body { height: 100%; background: #eee; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .content { padding: 24px; }
-mat-card { width: 80%; }
-.card-container { width: 32%; margin-left: 1%; float: left; margin-bottom: 2rem; }
-/*.movie-poster {max-height: 200px;}*/
+.movie-card:hover { cursor: pointer; }
+.spacer { flex: 1 1 auto; }
+.movie-poster-dialog { width: 90%; height: 90%; }
+.dialog-title { padding-left: 13px; }
+.title-small{ font-size: 0.8rem; margin-left: 12px; color: #757575; }
+.right { float: right !important; }
+.activeLayout { color: #e91e63 !important; }
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description { flex-basis: 0; }
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-card-title { font-size: 0.9rem; text-align: center; }
+.mat-card-subtitle { font-size: 0.8rem; text-align: center; }
+
+.row { margin-left: auto; margin-right: auto; margin-bottom: 20px; }
+.col .row { margin-left: -.75rem; margin-right: -.75rem; }
+.row .col { float: left; box-sizing: border-box; padding: 0 .75rem; min-height: 1px; }
+
+.row .col.s1 { width: 8.3333333333%; margin-left: auto; left: auto; right: auto; }
+.row .col.s2 { width: 16.6666666667%; margin-left: auto; left: auto; right: auto; }
+.row .col.s3 { width: 25%; margin-left: auto; left: auto; right: auto; }
+.row .col.s4 { width: 33.3333333333%; margin-left: auto; left: auto; right: auto; }
+.row .col.s5 { width: 41.6666666667%; margin-left: auto; left: auto; right: auto; }
+.row .col.s6 { width: 50%; margin-left: auto; left: auto; right: auto; }
+.row .col.s7 { width: 58.3333333333%; margin-left: auto; left: auto; right: auto; }
+.row .col.s8 { width: 66.6666666667%; margin-left: auto; left: auto; right: auto; }
+.row .col.s9 { width: 75%; margin-left: auto; left: auto; right: auto; }
+.row .col.s10 { width: 83.3333333333%; margin-left: auto; left: auto; right: auto; }
+.row .col.s11 { width: 91.6666666667%; margin-left: auto; left: auto; right: auto; }
+.row .col.s12 { width: 100%; margin-left: auto; left: auto; right: auto; }
+
+@media only screen and (min-width: 601px) {
+    .row .col.m1 { width: 8.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m2 { width: 16.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m3 { width: 25%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m4 { width: 33.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m5 { width: 41.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m6 { width: 50%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m7 { width: 58.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m8 { width: 66.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m9 { width: 75%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m10 { width: 83.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m11 { width: 91.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.m12 { width: 100%; margin-left: auto; left: auto; right: auto; }
+}
+
+@media only screen and (min-width: 993px) {
+    .row .col.l1 { width: 8.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l2 { width: 16.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l3 { width: 25%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l4 { width: 33.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l5 { width: 41.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l6 { width: 50%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l7 { width: 58.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l8 { width: 66.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l9 { width: 75%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l10 { width: 83.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l11 { width: 91.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.l12 { width: 100%; margin-left: auto; left: auto; right: auto; }
+}
+
+@media only screen and (min-width: 1201px) {
+    .row .col.xl1 { width: 8.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl2 { width: 16.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl3 { width: 25%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl4 { width: 33.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl5 { width: 41.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl6 { width: 50%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl7 { width: 58.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl8 { width: 66.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl9 { width: 75%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl10 { width: 83.3333333333%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl11 { width: 91.6666666667%; margin-left: auto; left: auto; right: auto; }
+    .row .col.xl12 { width: 100%; margin-left: auto; left: auto; right: auto; }
+}

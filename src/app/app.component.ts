@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MovieDialogComponent } from './movie-dialog/movie-dialog.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'filmes';
 
+export class AppComponent {
+
+  constructor(public dialog: MatDialog) {}
+
+  title = 'filmes';
+  layout = 'list';
   movies = [
     {
         "nome": "Avengers: Infinity War",
@@ -33,5 +39,20 @@ export class AppComponent {
         "descricao": "Imprisoned on the other side of the universe, the mighty Thor finds himself in a deadly gladiatorial contest that pits him against the Hulk, his former ally and fellow Avenger.",
         "poster": "https://m.media-amazon.com/images/M/MV5BMjMyNDkzMzI1OF5BMl5BanBnXkFtZTgwODcxODg5MjI@._V1_.jpg"
     }
-];
+  ];
+
+  openDialog(i:any): void {
+    this.dialog.open(MovieDialogComponent, {
+      data: this.movies[i]
+    });
+  }
+
+  alteraLayout(layout:string): void {
+    this.layout = layout;
+  }
+
+  verificaLayout(tipo: string): boolean {
+    if (tipo == this.layout) { return true; }
+    else { return false; }
+  }
 }
