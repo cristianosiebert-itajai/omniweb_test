@@ -1,14 +1,13 @@
-<h2 class="dialog-title" mat-dialog-title>{{data.nome}}</h2>
+<h2 class="dialog-title" mat-dialog-title>{{data.nome}} - {{ data.ano }}</h2>
 <mat-dialog-content class="mat-typography">
   <div class="row">
     <div class="col s12 m4">
       <img class="mat-elevation-z4 movie-poster-dialog" src="{{data.poster}}" alt="{{data.nome}}">
     </div>
     <div class="col s12 m8">
-      <p>Ano de lançamento: {{data.ano}}</p>
-      <p>Gênero: {{data.genero}}</p>
-      <p>Direção: {{data.diretor}}</p>
-      <p>Sinopse: <br />{{data.descricao}}</p>
+      <p>Gênero: <span class="content-info">{{data.genero}}</span></p>
+      <p>Direção: <span class="content-info">{{data.diretor}}</span></p>
+      <p>Sinopse: <br /> <span class="content-info">{{data.descricao}}</span></p>
     </div>
   </div>
 </mat-dialog-content>

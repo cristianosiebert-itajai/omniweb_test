@@ -1,12 +1,6 @@
 <mat-toolbar color="primary">
   <span>YYZ Filmes e Séries</span>
   <span class="spacer"></span>
-  <button matTooltip="Meu perfil" mat-icon-button aria-label="Meu perfil">
-    <mat-icon>account_circle</mat-icon>
-  </button>
-  <button matTooltip="Sair" mat-icon-button aria-label="Sair">
-    <mat-icon>logout</mat-icon>
-  </button>
 </mat-toolbar>
 
 <section class="content">
@@ -35,19 +29,8 @@
           <mat-card-subtitle>{{movie.ano}} - {{movie.genero}}</mat-card-subtitle>
         </mat-card>
 
-        <mat-expansion-panel *ngIf="verificaLayout('list')">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              {{movie.nome}}
-            </mat-panel-title>
-            <mat-panel-description>
-              {{movie.ano}} - {{movie.genero}}
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>This is the primary content of the panel.</p>
-        </mat-expansion-panel>
+        <expansion-list [movie]="movie" *ngIf="verificaLayout('list')"></expansion-list>
       </div>
     </div>
   </mat-accordion>
 </section>
-

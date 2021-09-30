@@ -6,12 +6,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .content { padding: 24px; }
 .movie-card:hover { cursor: pointer; }
 .spacer { flex: 1 1 auto; }
-.movie-poster-dialog { width: 90%; height: 90%; }
+.movie-poster, .movie-poster-dialog { width: 90%; height: 90%; }
 .dialog-title { padding-left: 13px; }
 .title-small{ font-size: 0.8rem; margin-left: 12px; color: #757575; }
 .right { float: right !important; }
 .activeLayout { color: #e91e63 !important; }
 .mat-expansion-panel-header-title, .mat-expansion-panel-header-description { flex-basis: 0; }
+.no-borders { border-radius: 0 !important; }
+.content-info { font-weight: 300; }
+.movie-card:hover { box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%); }
 
 .example-headers-align .mat-expansion-panel-header-description {
   justify-content: space-between;

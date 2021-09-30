@@ -1,0 +1,19 @@
+<mat-expansion-panel hideToggle class="no-borders">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{movie.nome}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{movie.ano}} - {{movie.genero}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="row">
+      <div class="col s12 m4">
+        <img class="movie-poster mat-elevation-z4" src="{{movie.poster}}" alt="{{movie.nome}}">
+      </div>
+      <div class="col s12 m8">
+        <p>Direção: <span class="content-info">{{movie.diretor}}</span></p>
+        <p>Sinopse: <br /> <span class="content-info">{{movie.descricao}}</span></p>
+      </div>
+    </div>
+</mat-expansion-panel>
